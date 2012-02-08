@@ -34,7 +34,7 @@ else
 
       sys("tar zxvf #{LIBGIT2_DIST}")
       Dir.chdir(LIBGIT2_DIR) do
-        sys("make -f Makefile.embed")
+        puts `make -f Makefile.embed`
         FileUtils.cp "libgit2.a", LIBGIT2_LIB_PATH
       end
     end
